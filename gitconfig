@@ -10,6 +10,8 @@
         up = rebase
 	type = cat-file -t
 	dump = cat-file -p
+[interactive]
+        singlekey = true
 [help]
 	autocorrect = 1
 [apply]
