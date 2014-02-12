@@ -1,5 +1,5 @@
 [core]
-	editor = vim +start
+	editor = vim +1 +start
 [user]
 	name = Jiri Pejchal
 	email = jiri.pejchal@gmail.com

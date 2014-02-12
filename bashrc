@@ -3,7 +3,6 @@ export HISTCONTROL=ignoreboth
 
 export HISTSIZE=2000
 export HISTFILESIZE=8000
-
-function mcd() {
-  mkdir -p "$1" && cd "$1";
-}
+export HISTTIMEFORMAT='%F %T '
+# Make some commands not show up in history
+export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
