@@ -20,3 +20,12 @@ endfun
 
 
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+if has("autocmd")
+        augroup Git
+                au!
+                au BufRead COMMIT_EDITMSG normal 1G
+                au BufRead COMMIT_EDITMSG set tw=72
+        augroup END
+endif
+
