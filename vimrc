@@ -11,6 +11,8 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+set pastetoggle=<F5>
+
 function! <SID>StripTrailingWhitespaces()
     let l = line(".")
     let c = col(".")
