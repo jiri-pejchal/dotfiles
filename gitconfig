@@ -1,0 +1,18 @@
+[core]
+	editor = vim +start
+[user]
+	name = Jiri Pejchal
+	email = jiri.pejchal@gmail.com
+[alias]
+	ci = commit -v
+	co = checkout
+	st = status
+        up = rebase
+	type = cat-file -t
+	dump = cat-file -p
+[help]
+	autocorrect = 1
+[apply]
+	whitespace = fix
+
+# vim: set ft=gitconfig:
