@@ -12,8 +12,6 @@
 	dump = cat-file -p
 [interactive]
         singlekey = true
-[help]
-	autocorrect = 1
 [apply]
 	whitespace = fix
 
