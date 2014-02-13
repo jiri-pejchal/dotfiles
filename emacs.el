@@ -22,6 +22,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(blink-cursor-mode nil)
+ '(inhibit-startup-screen t)
  '(save-place t nil (saveplace))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
