@@ -6,6 +6,11 @@ alias -- -='cd -'
 alias ll='ls -l'
 alias la='ls -la'
 
+alias v='vim'
+alias c=cat
+
+alias xcopy='xsel -b'
+
 alias g='git'
 alias ga='git add'
 alias gb='git branch'
@@ -23,7 +28,6 @@ alias go='git checkout'
 alias glog='git log'
 alias glogp='git log --pretty=format:"%h %s" --graph'
 
-alias v='vim'
 
 # IP addresses
 alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
