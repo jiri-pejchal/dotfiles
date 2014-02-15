@@ -16,6 +16,12 @@
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+(defun back-to-indentation-or-beginning () (interactive)
+   (if (= (point) (progn (back-to-indentation) (point)))
+       (beginning-of-line)))
+
+(global-set-key [home] 'back-to-indentation-or-beginning)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -25,8 +31,8 @@
  '(inhibit-startup-screen t)
  '(save-place t nil (saveplace))
  '(scroll-bar-mode nil)
- '(tool-bar-mode nil)
- '(show-paren-mode t))
+ '(show-paren-mode t)
+ '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

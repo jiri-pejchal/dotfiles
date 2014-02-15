@@ -31,3 +31,19 @@ if has("autocmd")
         augroup END
 endif
 
+" map <Home> to move to first word in line
+" if at first word, move to beginning of line
+nnoremap <silent> <Home> :call SmartHome("n")<CR>
+inoremap <silent> <Home> <C-O>:call SmartHome("i")<CR>
+vnoremap <silent> <Home> <Esc>:call SmartHome("v")<CR>
+function! SmartHome(mode)
+  if strpart(getline('.'), -1, col('.')) =~ '^\s\+$'
+    normal! 0
+  else
+    normal! ^
+  endif
+  if a:mode == "v"
+    normal! msgv`s
+  endif
+endfun
+
