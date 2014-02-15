@@ -3,6 +3,8 @@
 [user]
 	name = Jiri Pejchal
 	email = jiri.pejchal@gmail.com
+[push]
+	default = simple
 [alias]
 	ci = commit -v
 	co = checkout
