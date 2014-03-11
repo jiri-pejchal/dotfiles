@@ -1,15 +1,30 @@
+source ~/.vim/vundle.vim
+
 set modeline
 syntax on
-filetype on
+filetype plugin indent on
 set isfname-==
-"replace <TAB> with spaces
-set expandtab
 noremap q :q<CR>
 
 " swp files are annoying. Let's hope vim doesn't crash
 set nobackup
 set nowritebackup
 set noswapfile
+
+" searching
+set showmatch
+set incsearch
+set hlsearch
+
+" make searches case-sensitive only if they contain upper-case characters
+set ignorecase smartcase
+
+" indenting
+set smartindent
+set tabstop=4
+set shiftwidth=4
+"replace <TAB> with spaces
+set expandtab
 
 set pastetoggle=<F5>
 
