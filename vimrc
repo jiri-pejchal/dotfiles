@@ -1,3 +1,4 @@
+set nocompatible
 source ~/.vim/vundle.vim
 
 set modeline
