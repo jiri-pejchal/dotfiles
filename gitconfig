@@ -9,14 +9,15 @@
 	ci = commit -v
 	co = checkout
 	st = status
-        up = rebase
-        lol = log --graph --decorate --pretty=oneline --abbrev-commit
-        lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    up = rebase
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	type = cat-file -t
 	dump = cat-file -p
 [interactive]
-        singlekey = true
+     singlekey = true
 [apply]
 	whitespace = fix
-
+[branch]
+    autosetuprebase = always
 # vim: set ft=gitconfig:
