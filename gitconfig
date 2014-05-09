@@ -20,4 +20,6 @@
 	whitespace = fix
 [branch]
     autosetuprebase = always
+[include]
+    path = ~/.gitconfig.local
 # vim: set ft=gitconfig:
