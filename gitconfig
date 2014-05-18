@@ -3,14 +3,21 @@
 [push]
 	default = simple
 [alias]
-	ci = commit -v
-	co = checkout
 	st = status
-    up = rebase
+	ci = commit --verbose
+	co = checkout
+    di = diff
+    dc = diff --cached
+    ff = merge --ff-only
+    pulff = pull --ff-only
+    fa = fetch --all
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    pom = push origin master
+    b = branch
 	type = cat-file -t
 	dump = cat-file -p
+    up = pull --rebase --prune
 [interactive]
      singlekey = true
 [apply]
