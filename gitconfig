@@ -26,4 +26,8 @@
     autosetuprebase = always
 [include]
     path = ~/.gitconfig.local
+[log]
+    # auto in future
+    decorate = true
+
 # vim: set ft=gitconfig:
