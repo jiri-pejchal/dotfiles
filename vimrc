@@ -24,6 +24,8 @@ set ignorecase smartcase
 set smartindent
 set tabstop=4
 set shiftwidth=4
+" make "tab" insert indents instead of tabs at the beginning of a line
+set smarttab
 "replace <TAB> with spaces
 set expandtab
 
