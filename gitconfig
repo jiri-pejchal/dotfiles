@@ -8,16 +8,18 @@
 	co = checkout
     di = diff
     dc = diff --cached
+    rb = rebase
     ff = merge --ff-only
     pulff = pull --ff-only
     fa = fetch --all
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     pom = push origin master
-    b = branch
+    br = branch
 	type = cat-file -t
 	dump = cat-file -p
     up = pull --rebase --prune
+    pi = cherry-pick
 [interactive]
      singlekey = true
 [apply]
