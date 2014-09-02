@@ -30,5 +30,8 @@
     path = ~/.gitconfig.local
 [log]
     decorate = auto
+[tag]
+    # treat tag names as versions
+	sort = version:refname
 
 # vim: set ft=gitconfig:
