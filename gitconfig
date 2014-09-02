@@ -29,7 +29,6 @@
 [include]
     path = ~/.gitconfig.local
 [log]
-    # auto in future
-    decorate = true
+    decorate = auto
 
 # vim: set ft=gitconfig:
