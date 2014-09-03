@@ -6,8 +6,10 @@
 	st = status
 	ci = commit --verbose
 	co = checkout
+	cob = checkout -b
     di = diff
     dc = diff --cached
+    ec = config --global -e
     rb = rebase
     ff = merge --ff-only
     pulff = pull --ff-only
