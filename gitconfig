@@ -1,12 +1,12 @@
 [core]
-	editor = vim +1 +start
+        editor = vim +1 +start
 [push]
-	default = simple
+        default = simple
 [alias]
-	st = status
-	ci = commit --verbose
-	co = checkout
-	cob = checkout -b
+    st = status
+    ci = commit --verbose
+    co = checkout
+    cob = checkout -b
     di = diff
     dc = diff --cached
     ec = config --global -e
@@ -18,14 +18,14 @@
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     pom = push origin master
     br = branch
-	type = cat-file -t
-	dump = cat-file -p
+    type = cat-file -t
+    dump = cat-file -p
     up = pull --rebase --prune
     pi = cherry-pick
 [interactive]
      singlekey = true
 [apply]
-	whitespace = fix
+        whitespace = fix
 [branch]
     autosetuprebase = always
 [include]
@@ -34,6 +34,6 @@
     decorate = auto
 [tag]
     # treat tag names as versions
-	sort = version:refname
+    sort = version:refname
 
 # vim: set ft=gitconfig:
