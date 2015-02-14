@@ -40,3 +40,5 @@
 # vim: set ft=gitconfig:
 [credential]
 	helper = cache
+[merge]
+	conflictstyle = diff3
