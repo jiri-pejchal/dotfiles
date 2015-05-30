@@ -24,8 +24,11 @@
     cpc = cherry-pick --continue
     d = diff
     dc = diff --cached
+    dw = diff --word-diff
     ec = config --global -e
     l = log
+    #
+    la = "config -l |grep ^alias|cut -c 7-"
     lf = log -g
     rb = rebase
     rba = rebase --abort
@@ -54,6 +57,10 @@
     path = ~/.gitconfig.local
 [log]
     decorate = auto
+[rebase]
+    autosquash = true
+[rerere]
+    enabled = true
 [tag]
     # treat tag names as versions
     sort = version:refname
