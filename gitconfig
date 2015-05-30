@@ -3,25 +3,46 @@
 [push]
         default = simple
 [alias]
-    st = status
+    aa = add --all
+    ai = add --interactive
+    b = branch
+    ba = branch -a
+    bd = branch -d
+    bD = branch -d
+    br = branch -r
     ci = commit --verbose
+    #bclean = "!f() { git branch --merged ${1-master} | grep -v release | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
+    st = status
+    c = commit --verbose
+    ci = commit --verbose
+    cif = commit --verbose --fixup
+    ca = commit --verbose --amend
     co = checkout
     cob = checkout -b
-    di = diff
+    cp = cherry-pick
+    cpa = cherry-pick --abort
+    cpc = cherry-pick --continue
+    d = diff
     dc = diff --cached
     ec = config --global -e
+    l = log
+    lf = log -g
     rb = rebase
+    rba = rebase --abort
+    rbc = rebase --continue
+    rbi = rebase --interactive --autosquash
+    rs = reset --soft
+    sl = stash list
+    sp = stash pop
     ff = merge --ff-only
     pulff = pull --ff-only
     fa = fetch --all
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     pom = push origin master
-    br = branch
     type = cat-file -t
     dump = cat-file -p
     up = pull --rebase --prune
-    pi = cherry-pick
     lg = log --graph --all --format='%C(auto)%h%d %C(auto,bold black)<%C(reset)%C(auto,blue)%aE%C(auto,bold black)>%C(reset) %s %C(auto,bold black)(%C(reset)%C(auto,green)%ar%C(auto,bold black))%C(reset)'
 [interactive]
      singlekey = true
