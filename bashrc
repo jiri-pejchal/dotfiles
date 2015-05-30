@@ -9,6 +9,7 @@ shopt -s histappend
 export HISTSIZE=2000
 export HISTFILESIZE=8000
 export HISTTIMEFORMAT='%F %T '
+
 # Make some commands not show up in history
 export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
 
@@ -31,4 +32,4 @@ shopt -s cdspell
 # spelling correction on directory names during word completion
 shopt -s dirspell
 
-#redshif-tgtk  -l 49.20:16.6097981 -t 5500K:4900K
+#redshif-tgtk  -l 49.20:16.6097981 -t 4500K:3500K
