@@ -3,6 +3,7 @@
 [push]
         default = simple
 [alias]
+    a = add
     aa = add --all
     ai = add --interactive
     b = branch
@@ -27,6 +28,8 @@
     dw = diff --word-diff
     ec = config --global -e
     l = log
+    m = merge
+    ma = merge --abort
     #
     la = "config -l |grep ^alias|cut -c 7-"
     lf = log -g
@@ -65,8 +68,8 @@
     # treat tag names as versions
     sort = version:refname
 
-# vim: set ft=gitconfig:
 [credential]
 	helper = cache
 [merge]
 	conflictstyle = diff3
+# vim: set ft=gitconfig:
