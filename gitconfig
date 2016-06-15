@@ -1,9 +1,11 @@
+[commit]
+    verbose = true
 [core]
-        editor = vim +1 +start
+    editor = vim +1 +start
 [diff]
-        algorithm = histogram
+    algorithm = histogram
 [push]
-        default = simple
+    default = simple
 [alias]
     a = add
     aa = add --all
