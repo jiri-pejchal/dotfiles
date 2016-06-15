@@ -4,6 +4,8 @@
     editor = vim +1 +start
 [diff]
     algorithm = histogram
+    # shift the hunk boundary
+    compactionHeuristic = true
 [push]
     default = simple
 [alias]
