@@ -9,7 +9,7 @@
     aa = add --all
     ai = add --interactive
     b = branch
-    ba = branch -a
+    ba = branch --all
     bd = branch -d
     bD = branch -d
     br = branch -r
@@ -50,6 +50,7 @@
     pom = push origin master
     type = cat-file -t
     dump = cat-file -p
+    unstage = reset HEAD --
     up = pull --rebase --prune
     lg = log --graph --all --format='%C(auto)%h%d %C(auto,bold black)<%C(reset)%C(auto,blue)%aE%C(auto,bold black)>%C(reset) %s %C(auto,bold black)(%C(reset)%C(auto,green)%ar%C(auto,bold black))%C(reset)'
 [interactive]
