@@ -5,7 +5,7 @@
 [diff]
     algorithm = histogram
     # shift the hunk boundary
-    compactionHeuristic = true
+    indentHeuristic = true
 [push]
     default = simple
 [alias]
@@ -34,6 +34,7 @@
     dw = diff --word-diff
     ec = config --global -e
     l = log
+    latest = for-each-ref --count=30 --sort=-committerdate refs/heads/ --format=`%(refname:short)`
     m = merge
     ma = merge --abort
     #
