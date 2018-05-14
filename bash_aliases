@@ -20,5 +20,5 @@ alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias localip='ip getifaddr'
 alias ips="ifconfig -a | perl -nler'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 
-
+alias https='http --default-scheme=https'
 # vim: set ft=sh:
