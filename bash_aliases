@@ -10,6 +10,7 @@ alias v='vim'
 alias c=cat
 
 alias ip4='ip -4 --color a'
+alias https='http --default-scheme=https'
 
 alias tarp='tar --use-compress-program=pxz'
 
