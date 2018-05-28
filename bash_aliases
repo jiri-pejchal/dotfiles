@@ -9,6 +9,8 @@ alias la='ls -la'
 alias v='vim'
 alias c=cat
 
+alias ip4='ip -4 --color a'
+
 alias tarp='tar --use-compress-program=pxz'
 
 alias xcopy='xsel -b'
