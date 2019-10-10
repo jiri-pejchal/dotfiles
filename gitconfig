@@ -6,6 +6,8 @@
     algorithm = histogram
     # shift the hunk boundary
     indentHeuristic = true
+    # do not show any source or destination prefix
+    noprefix = true
 [push]
     default = simple
 [alias]
