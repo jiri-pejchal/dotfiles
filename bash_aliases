@@ -19,7 +19,8 @@ alias xcopy='xsel -b'
 alias gti='git'
 
 # IP addresses
-alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias ip='ip --color'
+alias ipb='ip --color --brief'
 alias localip='ip getifaddr'
 alias ips="ifconfig -a | perl -nler'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 
