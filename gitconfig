@@ -14,6 +14,7 @@
     a = add
     aa = add --all
     ai = add --interactive
+    alias = config --get-regexp ^alias.
     b = branch
     ba = branch --all
     bd = branch -d
@@ -39,8 +40,6 @@
     latest = for-each-ref --count=30 --sort=-committerdate refs/heads/ --format=`%(refname:short)`
     m = merge
     ma = merge --abort
-    #
-    la = "config -l |grep ^alias|cut -c 7-"
     lf = log -g
     pf = push --force-with-lease
     poh = push origin HEAD
