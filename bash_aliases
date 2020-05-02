@@ -1,6 +1,6 @@
 alias ..='cd ..'
-alias cd..='cd ..'
 alias ...='cd ../..'
+alias cd..='cd ..'
 alias -- -='cd -'
 
 alias ll='ls -l'
@@ -17,12 +17,11 @@ alias tarp='tar --use-compress-program=pxz'
 alias xcopy='xsel -b'
 
 alias gti='git'
+alias g='git status -s'
 
 # IP addresses
 alias ip='ip --color'
 alias ipb='ip --color --brief'
-alias localip='ip getifaddr'
-alias ips="ifconfig -a | perl -nler'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 
 alias https='http --default-scheme=https'
 # vim: set ft=sh:
