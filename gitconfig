@@ -22,7 +22,7 @@
     br = branch -r
     ci = commit --verbose
     #bclean = "!f() { git branch --merged ${1-master} | grep -v release | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
-    st = status
+    st = status -u
     c = commit --verbose
     ci = commit --verbose
     cif = commit --verbose --fixup
@@ -83,4 +83,6 @@
 	helper = cache
 [merge]
 	conflictstyle = diff3
+[diff]
+    renameLimit=456
 # vim: set ft=gitconfig:
