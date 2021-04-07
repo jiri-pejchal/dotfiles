@@ -19,7 +19,7 @@
     b = branch
     ba = branch --all
     bd = branch -d
-    bD = branch -d
+    bD = branch -D
     br = branch -r
     ci = commit --verbose
     #bclean = "!f() { git branch --merged ${1-master} | grep -v release | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
