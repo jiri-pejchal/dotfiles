@@ -2,6 +2,7 @@
     verbose = true
 [core]
     editor = vim +1 +start
+    whitespace = space-before-tab,tab-in-indent,trailing-space
 [diff]
     algorithm = histogram
     # shift the hunk boundary
@@ -83,6 +84,6 @@
 	helper = cache
 [merge]
 	conflictstyle = diff3
-[diff]
-    renameLimit=456
 # vim: set ft=gitconfig:
+[init]
+	defaultBranch = main
