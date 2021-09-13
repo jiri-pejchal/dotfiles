@@ -7,25 +7,23 @@ alias ll='ls -l'
 alias la='ls -la'
 alias lt='ls -lrt'
 
+alias li='locate -i'
+
 alias tarp='tar --use-compress-program=pxz'
 
 alias xcopy='xsel -b'
 
 # git
-alias gti='git'
 alias g='git status -s'
+alias gitroot='cd $(git rev-parse --show-toplevel)'
+alias gti='git'
 
 # IP addresses
 alias ip='ip --color'
 alias ipa='ip -4 --color a'
 alias ipb='ip --color --brief'
 
-# aptitude
-alias u='sudo aptitude -u'
-alias au='sudo aptitude upgrade'
-alias ai='sudo aptitude install'
-alias ag='sudo aptitude safe-upgrade'
-
+alias svim='sudo vim'
 alias SS='sudo systemctl'
 
 # youtube-dll
