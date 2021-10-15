@@ -44,6 +44,10 @@ alias gnus='emacs -f gnus &'
 # exit to the current directory
 alias mc=". /usr/lib/mc/mc-wrapper.sh"
 
+# import all javase packages
+# define print functions
+alias jshellj="jshell JAVASE PRINTING"
+
 function mcd() {
   mkdir -p "$1" && cd "$1";
 }
