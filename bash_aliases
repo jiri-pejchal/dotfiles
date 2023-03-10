@@ -3,9 +3,13 @@ alias ...='cd ../..'
 alias cd..='cd ..'
 alias -- -='cd -'
 
-alias ll='ls -l'
+#alias ll='ls -l'
+alias ll='exa -l'
+
 alias la='ls -la'
 alias lt='ls -lrt'
+alias lm='exa -l --sort=modified'
+alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --color-scale'
 
 alias li='locate -i'
 
@@ -15,7 +19,7 @@ alias xcopy='xsel -b'
 
 # git
 alias g='git status -s'
-alias gitroot='cd $(git rev-parse --show-toplevel)'
+alias ..g='cd $(git rev-parse --show-toplevel)'
 alias gti='git'
 
 # IP addresses
@@ -27,18 +31,18 @@ alias svim='sudo vim'
 alias SS='sudo systemctl'
 
 # youtube-dll
-alias yt='youtube-dl --add-metadata'
-alias yta='youtube-dl -x'
+alias yt='yt-dlp --add-metadata'
+alias yx='yt-dlp -x'
 
 # aptitude
 alias u='sudo aptitude -u'
-alias au='sudo aptitude upgrade'
-alias ai='sudo aptitude install'
+alias U='sudo aptitude upgrade'
+alias I='sudo aptitude install'
 alias ag='sudo aptitude safe-upgrade'
 
 alias https='http --default-scheme=https'
 
-# emacs 
+# emacs
 alias gnus='emacs -f gnus &'
 
 # exit to the current directory
