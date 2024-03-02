@@ -10,23 +10,29 @@
     # do not show any source or destination prefix
     noprefix = true
 [push]
-    default = simple
+    default = current
 [alias]
     a = add
     aa = add --all
-    ai = add --interactive
+    # interactively select chunks of code to add to the index
+    ap = add --patch
     all = commit -a
     alias = config --get-regexp ^alias.
+    amend = commit --verbose --amend
     b = branch
     ba = branch --all
+    branches = branch --all
+    brs = branch --all
     bd = branch -d
     bD = branch -D
     br = branch -r
     ci = commit --verbose
     #bclean = "!f() { git branch --merged ${1-master} | grep -v release | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
+    # show untracked files
     st = status -u
     ci = commit --verbose
     cif = commit --verbose --fixup
+    cia = commit --verbose --amend
     ca = commit --verbose --amend
     co = checkout
     cob = checkout -b
@@ -48,8 +54,13 @@
     ra = rebase --abort
     rc = rebase --continue
     rs = reset --soft
+    root = rev-parse --show-toplevel
+    remotes = remote --verbose
+    # stash ignored and untracked files too
+    sa = stash --all
     sl = stash list
     sp = stash pop
+    sw = switch
     ff = merge --ff-only
     pulff = pull --ff-only
     fa = fetch --all
@@ -61,12 +72,27 @@
     unstage = reset HEAD --
     up = pull --rebase --prune
     lg = log --graph --all --format='%C(auto)%h%d %C(auto,bold black)<%C(reset)%C(auto,blue)%aE%C(auto,bold black)>%C(reset) %s %C(auto,bold black)(%C(reset)%C(auto,green)%ar%C(auto,bold black))%C(reset)'
+    whoami = config user.email
+
+    # Find branches containing commit
+    fb = "!f() { git branch -a --contains $1; }; f"
+
+    # Find tags containing commit
+    ft = "!f() { git describe --always --contains $1; }; f"
+
+    # Find commits by source code
+    fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
+
+    # Find commits by commit message
+    fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
 [interactive]
-     singlekey = true
+    singlekey = true
 [apply]
-        whitespace = fix
+    whitespace = fix
 [branch]
     autosetuprebase = always
+    # show most recently changed branches first
+    sort = -committerdate
 [include]
     path = ~/.gitconfig.local
 [log]
@@ -78,11 +104,12 @@
 [tag]
     # treat tag names as versions
     sort = version:refname
-
 [credential]
-	helper = cache
+    helper = cache
 [merge]
-	conflictstyle = diff3
+    conflictstyle = diff3
 [diff]
     renameLimit=456
+[init]
+    defaultBranch = main
 # vim: set ft=gitconfig:
