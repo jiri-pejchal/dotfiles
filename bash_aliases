@@ -8,8 +8,8 @@ alias ll='exa -l'
 
 alias la='ls -la'
 alias lt='ls -lrt'
-alias lm='exa -l --sort=modified'
-alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --color-scale'
+alias lm='eza -l --sort=modified'
+alias lx='eza -lbhHigUmuSa@ --time-style=long-iso --color-scale'
 
 alias li='locate -i'
 
@@ -27,11 +27,13 @@ alias ip='ip --color'
 alias ipa='ip -4 --color a'
 alias ipb='ip --color --brief'
 
+alias publicip="curl ifconfig.me"
+
 alias svim='sudo vim'
 alias SS='sudo systemctl'
 
 # youtube-dll
-alias yt='yt-dlp --add-metadata'
+alias y='yt-dlp --add-metadata'
 alias yx='yt-dlp -x'
 
 # aptitude
@@ -55,5 +57,5 @@ alias jshellj="jshell JAVASE PRINTING"
 function mcd() {
   mkdir -p "$1" && cd "$1";
 }
-
+alias t="~/bin/transcribe/transcribe"
 # vim: set ft=sh:
