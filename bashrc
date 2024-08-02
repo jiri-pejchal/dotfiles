@@ -14,8 +14,9 @@ export HISTTIMEFORMAT='%F %T '
 export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
 
 # keep working directory when opening new tab in gnome-terminal
-. /etc/profile.d/vte.sh
-
+if [ -f /etc/profile.d/vte.sh ]; then
+    . /etc/profile.d/vte.sh
+fi
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
