@@ -1,1 +1,4 @@
+# automatically handle line ending conversions
+# On commit: Convert line endings to LF (Unix style)
+# On checkout: Convert line endings to the OS's native line endings (CRLF on Windows, LF on macOS/Linux)
 * text=auto

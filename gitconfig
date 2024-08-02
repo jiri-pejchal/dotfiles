@@ -1,53 +1,71 @@
 [commit]
+    # Show diff in the commit message editor
     verbose = true
+
 [core]
+    # Set the default editor to vim, start on line 1
     editor = vim +1 +start
+
+    # Highlight whitespace issues
     whitespace = space-before-tab,tab-in-indent,trailing-space
+
 [diff]
     algorithm = histogram
-    # shift the hunk boundary
+
+    # Shift the hunk boundary for better readability
     indentHeuristic = true
-    # do not show any source or destination prefix
+
+    # Omit source and destination prefixes in diffs
     noprefix = true
+
 [push]
+    # Push the current branch to a branch of the same name by default
     default = current
+
 [alias]
     a = add
     aa = add --all
-    # interactively select chunks of code to add to the index
+    # Interactively select chunks of code to add to the index
     ap = add --patch
     all = commit -a
+    # List all aliases
     alias = config --get-regexp ^alias.
+    # Amend the previous commit
     amend = commit --verbose --amend
     b = branch
+    # List both local and remote branches
     ba = branch --all
-    branches = branch --all
-    brs = branch --all
     bd = branch -d
+    # Force delete a branch even if it has unmerged changes
     bD = branch -D
+    # List remote branches
     br = branch -r
-    ci = commit --verbose
-    #bclean = "!f() { git branch --merged ${1-master} | grep -v release | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
-    # show untracked files
+    # Show untracked files
     st = status -u
     ci = commit --verbose
     cif = commit --verbose --fixup
     cia = commit --verbose --amend
     ca = commit --verbose --amend
+    # Switch branches or restore working tree files
     co = checkout
+    # Create and switch to a new branch
     cob = checkout -b
+    # Apply the changes from a commit
     cp = cherry-pick
     cpa = cherry-pick --abort
     cpc = cherry-pick --continue
     d = diff
+    # Show changes between index and last commit
     dc = diff --cached
     dw = diff --word-diff
+    # Edit the global config file
     ec = config --global -e
     l = log
     latest = for-each-ref --count=30 --sort=-committerdate refs/heads/ --format=`%(refname:short)`
     m = merge
     ma = merge --abort
     lf = log -g
+    # Force push but prevent overwriting other's work
     pf = push --force-with-lease
     poh = push origin HEAD
     ri = rebase --interactive --autosquash
@@ -56,19 +74,23 @@
     rs = reset --soft
     root = rev-parse --show-toplevel
     remotes = remote --verbose
-    # stash ignored and untracked files too
+    # Stash changes including ignored and untracked files
     sa = stash --all
     sl = stash list
     sp = stash pop
+    # Switch branches
     sw = switch
     ff = merge --ff-only
     pulff = pull --ff-only
     fa = fetch --all
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-    pom = push origin master
+    pom = push origin main
+    # Show the type of an object
     type = cat-file -t
+    # Show the content of an object
     dump = cat-file -p
+    # Unstage files from the index
     unstage = reset HEAD --
     up = pull --rebase --prune
     lg = log --graph --all --format='%C(auto)%h%d %C(auto,bold black)<%C(reset)%C(auto,blue)%aE%C(auto,bold black)>%C(reset) %s %C(auto,bold black)(%C(reset)%C(auto,green)%ar%C(auto,bold black))%C(reset)'
@@ -85,31 +107,50 @@
 
     # Find commits by commit message
     fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+
 [interactive]
+    # Enable single-key interactive mode for commands like rebase -i
     singlekey = true
+
 [apply]
+    # Fix common whitespace errors when applying patches
     whitespace = fix
+
 [branch]
+    # Set up new branches to use rebase when pulling
     autosetuprebase = always
-    # show most recently changed branches first
+
+    # Show most recently changed branches first
     sort = -committerdate
+
 [include]
     path = ~/.gitconfig.local
+
 [log]
+    # Add ref names and commit notes to log output
     decorate = auto
+
 [rebase]
     autosquash = true
+
 [rerere]
+    # Enable reuse recorded resolution to remember how conflicts were resolved
     enabled = true
+
 [tag]
-    # treat tag names as versions
+    # Sort tags as versions instead of alphabetically
     sort = version:refname
+
 [credential]
+    # Cache credentials in memory for a short period of time
     helper = cache
+
 [merge]
+    # Show the original text in addition to 'ours' and 'theirs' versions in merge conflicts
     conflictstyle = diff3
-[diff]
-    renameLimit=456
+
+
 [init]
     defaultBranch = main
+
 # vim: set ft=gitconfig:
