@@ -1,10 +1,16 @@
-# Immediately show all possible completions
+# Immediately show all possible completions if there is more than one match
 set show-all-if-ambiguous on
-set show-all-if-unmodified on
+
 # Be more intelligent when autocompleting by also looking at the text after
-# # the cursor. For example, when the current line is "cd ~/src/mozil", and
-# # the cursor is on the "z", pressing Tab will not autocomplete it to "cd
-# # ~/src/mozillail", but to "cd ~/src/mozilla". (This is supported by the
-# # Readline used by Bash 4.)
+# the cursor. For example, when the current line is "cd ~/src/mozil", and
+# the cursor is on the "z", pressing Tab will not autocomplete it to "cd
+# ~/src/mozillail", but to "cd ~/src/mozilla".
 set skip-completed-text on
+
 set completion-prefix-display-length 2
+
+# If there are more than x possible completions for a word, ask to show them all
+set completion-query-items 300
+
+# Try to stay at the same cursor position when moving through the history.
+set history-preserve-point on
