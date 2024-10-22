@@ -61,6 +61,7 @@
     # Edit the global config file
     ec = config --global -e
     l = log
+    logf = log --format=fuller
     latest = for-each-ref --count=30 --sort=-committerdate refs/heads/ --format=`%(refname:short)`
     m = merge
     ma = merge --abort
