@@ -54,6 +54,8 @@
     cp = cherry-pick
     cpa = cherry-pick --abort
     cpc = cherry-pick --continue
+    # add original commit reference in message
+    cpx = cherry-pick -x
     d = diff
     # Show changes between index and last commit
     dc = diff --cached
