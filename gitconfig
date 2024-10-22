@@ -63,7 +63,10 @@
     # Edit the global config file
     ec = config --global -e
     l = log
+    # Show detailed commit info including both author and committer dates
     logf = log --format=fuller
+    # Show patches
+    logp = log -p
     latest = for-each-ref --count=30 --sort=-committerdate refs/heads/ --format=`%(refname:short)`
     m = merge
     ma = merge --abort
