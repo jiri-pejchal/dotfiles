@@ -16,7 +16,7 @@
     indentHeuristic = true
 
     # Omit source and destination prefixes in diffs
-    noprefix = true
+    #noprefix = true
 
 [push]
     # Push the current branch to a branch of the same name by default
@@ -41,7 +41,9 @@
     # List remote branches
     br = branch -r
     # Show untracked files
+    s = status -u --short --branch
     st = status -u
+    cfg = !vim ~/.gitconfig
     ci = commit --verbose
     cif = commit --verbose --fixup
     cia = commit --verbose --amend
@@ -152,11 +154,12 @@
     helper = cache
 
 [merge]
-    # Show the original text in addition to 'ours' and 'theirs' versions in merge conflicts
-    conflictstyle = diff3
+    conflictstyle = zdiff3
 
+[mergetool]
+    # show only unresolved conflicts
+    hideResolved = true
 
 [init]
     defaultBranch = main
-
 # vim: set ft=gitconfig:
