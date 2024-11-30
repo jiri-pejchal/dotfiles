@@ -1,5 +1,6 @@
 alias ..='cd ..'
 alias ...='cd ../..'
+alias ....='cd ../../..'
 alias cd..='cd ..'
 alias -- -='cd -'
 
@@ -18,8 +19,11 @@ alias tarp='tar --use-compress-program=pxz'
 alias xcopy='xsel -b'
 
 # git
-alias g='git status -s'
-alias ..g='cd $(git rev-parse --show-toplevel)'
+alias g='git'
+alias gs='git status -u'
+# git aliases can't directly change bash's current directory
+# because they run in a subshell.
+alias gcd='cd $(git rev-parse --show-toplevel)'
 alias gti='git'
 
 # IP addresses
@@ -34,7 +38,7 @@ alias SS='sudo systemctl'
 
 # youtube-dll
 alias y='yt-dlp --add-metadata'
-alias yx='yt-dlp -x'
+alias yx='yt-dlp -x --add-metadata'
 
 # aptitude
 alias u='sudo aptitude -u'
