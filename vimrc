@@ -2,7 +2,6 @@ set nocompatible
 
 set modeline
 syntax on
-filetype plugin indent on
 " Remove = from filename characters (when using gf)
 set isfname-==
 " Remap 'q' to quit vim
@@ -14,6 +13,13 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+" Use system clipboard for copy/paste
+set clipboard=unnamedplus
+
+" Enhance wildmenu for command-line completion
+set wildmenu
+set wildmode=longest:full,full
+
 " searching
 set showmatch
 set incsearch
@@ -23,6 +29,8 @@ set hlsearch
 set ignorecase smartcase
 
 " indenting
+filetype plugin indent on
+set autoindent
 " On pressing tab, insert 4 spaces
 set expandtab
 " show existing tab with 4 spaces width
