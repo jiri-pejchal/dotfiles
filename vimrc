@@ -1,11 +1,13 @@
 set nocompatible
-source ~/.vim/vundle.vim
 
 set modeline
 syntax on
 filetype plugin indent on
+" Remove = from filename characters (when using gf)
 set isfname-==
-noremap q :q<CR>
+" Remap 'q' to quit vim
+" Disables the macro recording
+nnoremap q :q<CR>
 
 " swp files are annoying. Let's hope vim doesn't crash
 set nobackup
@@ -21,13 +23,19 @@ set hlsearch
 set ignorecase smartcase
 
 " indenting
-set smartindent
+" On pressing tab, insert 4 spaces
+set expandtab
+" show existing tab with 4 spaces width
 set tabstop=4
+set softtabstop=4
+" when indenting with '>', use 4 spaces width
 set shiftwidth=4
-" make "tab" insert indents instead of tabs at the beginning of a line
-set smarttab
 "replace <TAB> with spaces
 set expandtab
+
+
+" backspace over autoindentation, line breaks and start of insert mode
+set backspace=indent,eol,start
 
 set pastetoggle=<F5>
 
@@ -73,3 +81,21 @@ function! SmartHome(mode)
   endif
 endfun
 
+" vundle
+filetype off                  " required
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" plugins
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" jump to the last position when reopening a file
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\""|exe "normal! zz" | endif
