@@ -74,7 +74,7 @@
     ma = merge --abort
     lf = log -g
     # Force push but prevent overwriting other's work
-    pf = push --force-with-lease
+    pf = push --force-with-lease --force-if-includes
     poh = push origin HEAD
     ri = rebase --interactive --autosquash
     ra = rebase --abort
