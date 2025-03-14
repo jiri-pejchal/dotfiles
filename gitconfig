@@ -79,6 +79,7 @@
     ri = rebase --interactive --autosquash
     ra = rebase --abort
     rc = rebase --continue
+    re = restore
     rs = reset --soft
     root = rev-parse --show-toplevel
     remotes = remote --verbose
@@ -99,7 +100,7 @@
     # Show the content of an object
     dump = cat-file -p
     # Unstage files from the index
-    unstage = reset HEAD --
+    unstage = restore --staged
     up = pull --rebase --prune
     lg = log --graph --all --format='%C(auto)%h%d %C(auto,bold black)<%C(reset)%C(auto,blue)%aE%C(auto,bold black)>%C(reset) %s %C(auto,bold black)(%C(reset)%C(auto,green)%ar%C(auto,bold black))%C(reset)'
     whoami = config user.email
