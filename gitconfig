@@ -18,6 +18,10 @@
     # Omit source and destination prefixes in diffs
     #noprefix = true
 
+    # Highlight whitespace errors in added, removed and context lines during diffs,
+    # making whitespace issues visible not just in added lines (the default).
+    wsErrorHighlight = all
+
 [push]
     # Push the current branch to a branch of the same name by default
     default = current
