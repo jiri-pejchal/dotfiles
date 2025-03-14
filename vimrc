@@ -14,7 +14,9 @@ set nowritebackup
 set noswapfile
 
 " Use system clipboard for copy/paste
-set clipboard=unnamedplus
+if has('clipboard')
+    set clipboard=unnamedplus
+endif
 
 " Enhance wildmenu for command-line completion
 set wildmenu
@@ -107,3 +109,5 @@ filetype plugin indent on    " required
 
 " jump to the last position when reopening a file
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\""|exe "normal! zz" | endif
+
+set mouse=
