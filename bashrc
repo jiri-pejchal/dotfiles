@@ -1,5 +1,5 @@
 # list all options:  shopt -p
-shopt -s histappend
+
 # don't put duplicate lines or lines starting with space in the history.
 export HISTCONTROL=ignoreboth
 

@@ -58,8 +58,12 @@ alias mc=". /usr/lib/mc/mc-wrapper.sh"
 # define print functions
 alias jshellj="jshell JAVASE PRINTING"
 
-function mcd() {
-  mkdir -p "$1" && cd "$1";
-}
 alias t="~/bin/transcribe/transcribe"
+
+# Include Mac-specific aliases if on macOS
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    if [ -f ~/.bash_aliases_mac ]; then
+        . ~/.bash_aliases_mac
+    fi
+fi
 # vim: set ft=sh:

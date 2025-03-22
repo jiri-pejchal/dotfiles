@@ -20,6 +20,11 @@ fd() {
     find . -type d -name "*$1*"
 }
 
+# Cheatsheet for common commands
+cheat() {
+    curl "cheat.sh/$1"
+}
+
 # `g` is a shortcut for git, it defaults to `git s` (status) if no argument is given.
 function g() {
     local cmd=${1-status}
