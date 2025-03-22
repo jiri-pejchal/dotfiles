@@ -5,9 +5,19 @@ function mcd() {
   mkdir -p "$1" && cd "$1";
 }
 
-# find shorthand
-function f() {
-    find . -name "$1"
+# Find files by name
+ff() {
+    find . -type f -name "*$1*"
+}
+
+# Find files by name
+ffi() {
+    find . -type f -iname "*$1*"
+}
+
+# Find directories by name
+fd() {
+    find . -type d -name "*$1*"
 }
 
 # `g` is a shortcut for git, it defaults to `git s` (status) if no argument is given.
@@ -53,4 +63,3 @@ function extract() {
                 echo "'$1' is not a valid file"
         fi
 }
-
