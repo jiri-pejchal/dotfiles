@@ -105,7 +105,7 @@
     dump = cat-file -p
     # Unstage files from the index
     unstage = restore --staged
-    up = pull --rebase --prune
+    up = "!f() { if [ $# -eq 0 ]; then git pull --rebase --prune; else git checkout $1 && git pull --rebase --prune; fi; }; f"
     lg = log --graph --all --format='%C(auto)%h%d %C(auto,bold black)<%C(reset)%C(auto,blue)%aE%C(auto,bold black)>%C(reset) %s %C(auto,bold black)(%C(reset)%C(auto,green)%ar%C(auto,bold black))%C(reset)'
     whoami = config user.email
 
