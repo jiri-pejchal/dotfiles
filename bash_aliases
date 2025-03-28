@@ -17,14 +17,23 @@ alias li='locate -i'
 alias tarp='tar --use-compress-program=pxz'
 
 alias xcopy='xsel -b'
+alias fd=fdfind
 
 # git
-alias g='git'
+alias g='git status -s'
 alias gs='git status -u'
 # git aliases can't directly change bash's current directory
 # because they run in a subshell.
+alias gd="git diff"
 alias gcd='cd $(git rev-parse --show-toplevel)'
 alias gti='git'
+
+# docker
+alias dcu='docker compose up -d --build --remove-orphans'
+alias dcd='docker compose down'
+alias dcs='docker compose stop'
+alias dcp='docker compose ps'
+alias dcl='docker compose logs -f'
 
 # IP addresses
 alias ip='ip --color'
