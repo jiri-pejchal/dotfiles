@@ -8,6 +8,7 @@
 
     # Highlight whitespace issues
     whitespace = space-before-tab,tab-in-indent,trailing-space
+    excludesfile = ~/.gitignore_global
 
 [diff]
     algorithm = histogram
