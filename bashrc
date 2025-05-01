@@ -33,4 +33,12 @@ shopt -s cdspell
 # spelling correction on directory names during word completion
 shopt -s dirspell
 
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+if [ -f ~/.bash_functions ]; then
+    source ~/.bash_functions
+fi
+
 #redshif-tgtk  -l 49.20:16.6097981 -t 4500K:3500K
