@@ -69,10 +69,16 @@ alias jshellj="jshell JAVASE PRINTING"
 
 alias t="~/bin/transcribe/transcribe"
 
-# Include Mac-specific aliases if on macOS
+# Mac-specific aliases if on macOS
 if [[ "$OSTYPE" == "darwin"* ]]; then
     if [ -f ~/.bash_aliases_mac ]; then
         . ~/.bash_aliases_mac
     fi
 fi
+
+# local aliases
+if [ -f ~/.bash_aliases_local ]; then
+    . ~/.bash_aliases_local
+fi
+
 # vim: set ft=sh:
