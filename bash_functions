@@ -15,10 +15,6 @@ ffi() {
     find . -type f -iname "*$1*"
 }
 
-# Find directories by name
-fd() {
-    find . -type d -name "*$1*"
-}
 
 # Cheatsheet for common commands
 cheat() {
