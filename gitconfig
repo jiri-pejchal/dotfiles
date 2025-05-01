@@ -29,7 +29,9 @@
 
 [alias]
     a = add
-    aa = add --all
+    aa = add --all --verbose
+    au = add -u --verbose
+    uc = !git add -u && git commit
     # Interactively select chunks of code to add to the index
     ap = add --patch
     all = commit -a

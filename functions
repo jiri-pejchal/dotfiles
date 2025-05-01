@@ -32,6 +32,17 @@ function g() {
     git $cmd $@
 }
 
+function gu() {
+    # no files specified
+    if [ $# -eq 0 ]; then
+        git add -u
+    else
+        git add "$@"
+    fi
+    git commit
+}
+
+
 # Extract archives - use: extract <file>
 # Based on http://dotfiles.org/~pseup/.bashrc
 function extract() {

@@ -25,7 +25,7 @@ alias gs='git status -u'
 # git aliases can't directly change bash's current directory
 # because they run in a subshell.
 alias gd="git diff"
-alias gcd='cd $(git rev-parse --show-toplevel)'
+alias groot='cd $(git rev-parse --show-toplevel)'
 alias gti='git'
 
 # docker
