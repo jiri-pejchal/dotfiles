@@ -87,6 +87,7 @@
     ra = rebase --abort
     rc = rebase --continue
     re = restore
+    recent-branches = for-each-ref --sort=-committerdate refs/heads/ --format='%(committerdate:short) %(refname:short)'
     rs = reset --soft
     root = rev-parse --show-toplevel
     remotes = remote --verbose
