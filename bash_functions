@@ -27,7 +27,7 @@ cheat() {
 
 # `g` is a shortcut for git, it defaults to `git s` (status) if no argument is given.
 function g() {
-    local cmd=${1-status}
+    local cmd=${1-status -u -s}
     shift
     git $cmd $@
 }
