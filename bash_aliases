@@ -5,7 +5,7 @@ alias cd..='cd ..'
 alias -- -='cd -'
 
 #alias ll='ls -l'
-alias ll='exa -l'
+alias ll='eza -l'
 
 alias la='ls -la'
 alias lt='ls -lrt'
