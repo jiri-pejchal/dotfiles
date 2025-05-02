@@ -1,5 +1,5 @@
 # Open files with default app
-alias o="open"
-alias oo="open ."
-
+alias o='open'
+alias oo='open .'
+alias mc='mc -u'
 # vim: set ft=sh:
