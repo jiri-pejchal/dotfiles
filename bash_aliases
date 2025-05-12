@@ -20,6 +20,7 @@ alias xcopy='xsel -b'
 alias fd=fdfind
 
 # git
+alias gau='git add -u'
 alias gs='git status -u -s'
 # git aliases can't directly change bash's current directory
 # because they run in a subshell.
