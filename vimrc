@@ -111,3 +111,10 @@ filetype plugin indent on    " required
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\""|exe "normal! zz" | endif
 
 set mouse=
+"colorscheme vim
+
+" Auto-wrap git commit messages at 72 characters
+autocmd FileType gitcommit setlocal textwidth=72
+autocmd FileType gitcommit setlocal wrap
+autocmd FileType gitcommit setlocal linebreak
+autocmd FileType gitcommit setlocal formatoptions+=t
